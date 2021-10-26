@@ -1,0 +1,19 @@
+{
+  "name": "search",
+  "version": "1.0.0",
+  "description": "## What is CodeIgniter?",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "build-css": "tailwindcss build src/tailwind.css -o public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/forms": "^0.3.4",
+    "swup": "^2.0.14",
+    "tailwindcss": "^2.2.17"
+  }
+}
