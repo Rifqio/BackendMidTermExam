@@ -13,7 +13,7 @@
 <section class="bg-gray-900 flex items-center justify-center min-h-screen">
     <div class="col-span-12 -mt-32">
         
-        <form action="/demo/save" method="POST">
+        <form action="/demo/update/<?= $demo['id']; ?>" method="POST">
             <?= csrf_field();?>
             <link href="https://cdn.jsdelivr.net/npm/@tailwindcss/custom-forms@0.2.1/dist/custom-forms.css" rel="stylesheet">
             <div class="p-4 shadow-md rounded-md text-left" style="max-width: 1200px;">
@@ -23,25 +23,14 @@
             <div class="mb-2">
                 <label class="">
                     <span class="text-white">Name</span>
-                    <?php 
-                    $data = [
-                        'name'  => 'name',
-                        'class' =>'form-input mt-1 block w-full shadow-inner',
-                        ];
-                        echo form_input($data);
-                    ?>                
+                    <input type="text" name="name" class="form-input mt-1 block w-full shadow-inner" autofocus value="<?= $demo['name']; ?>">               
                 </label>
             </div>
             
             <label class="block">
                 <span class="text-white">Email</span>
-                <?php 
-                $data = [
-                    'name'  => 'email',
-                    'class' =>'form-input mt-1 block w-full',
-                    'placeholder'  => 'johndoe@mail.com'];
-                    echo form_input($data);
-                ?>                
+                <input type="text" name="email" class="form-input mt-1 block w-full" value="<?= $demo['email']; ?>">
+  
             </label>
             
             <label class="block mt-4">
@@ -117,7 +106,7 @@
             </div>
             
             <a href="">
-                <button class="btn bg-green-500 text-white hover:bg-green-700 w-full">Send</button>
+                <button class="btn bg-red-500 text-white hover:bg-green-700 w-full">Edit</button>
             </a>
        
      </form>
