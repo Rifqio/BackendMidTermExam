@@ -15,14 +15,22 @@ class Demo extends BaseController
 
     public function index()
     {
-        $demo = $this->demoModel ->findAll();
+        //$demo = $this->demoModel ->findAll();
         
         $data = [
             'title' => 'Demo Test',
-            'demo' => $demo
+            'demo' => $this->demoModel->getDemo()
         ];
     
         return view('pages/demo',$data);
+    }
+    public function details($name)
+    {
+        $data = [
+            'title' => 'User Details',
+            'demo'=> $this->demoModel->getDemo($name)
+        ];
+        return view('pages/details',$data);
     }
 
     public function create()

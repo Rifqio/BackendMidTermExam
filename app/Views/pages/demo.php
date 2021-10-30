@@ -47,11 +47,11 @@
               <td class="p-3"><?= $demo['major'];?> </td>
               <td class="p-3 font-bold"><?= $demo['class']; ?> </td>
               <td class="p-3">
-                <span class="bg-purple-700 text-white font-semibold rounded-md px-2"><?= $demo['status'] ?></span>
+                <span class="bg-pink-600 text-white font-semibold rounded-md px-2"><?= $demo['status'] ?></span>
               </td>
               <td class="p-3 ">
                             <!-----------  Action ----------------->
-                <a href="#" class="text-gray-400 hover:text-gray-100 mr-2">
+                <a href="/demo/<?= $demo['name']; ?>" class="text-gray-400 hover:text-gray-100 mr-2">
                   <i class="material-icons-outlined text-base">visibility</i>
                 </a>
                 <a href="/demo/edit/<?= $demo['id'];?>" class="text-gray-400 hover:text-gray-100  mx-2">

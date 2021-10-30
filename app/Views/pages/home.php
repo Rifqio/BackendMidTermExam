@@ -11,8 +11,8 @@
         <ul id="menu" class="hidden text-sm sm:flex flex-1 justify-end items-center gap-12 uppercase text-secondary font-medium">
             <a href="#contact-section">Contact</a> 
             <a href="#about-section">About</a>
-            <a href="">
-                <button class="bg-brand-orange text-white rounded-lg py-2 px-4 uppercase hover:bg-red-700">Sign in</button>
+            <a href="https://github.com/Rifqio/BackendMidTermExam" target="_blank">
+                <button class="bg-brand-orange text-white rounded-lg py-2 px-4 uppercase hover:bg-red-700">download</button>
             </a>
         </ul>
     </nav>

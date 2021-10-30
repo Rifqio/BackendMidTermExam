@@ -10,6 +10,16 @@ class DemoModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = ['name','major','class','status','email'];
 
+    public function getDemo($name = false)
+    {
+        if($name == false)
+        {
+            return $this->findAll();
+        }
+
+        return $this->where(['name' => $name])->first();
+    }
+
     /*
     protected $useAutoIncrement = true;
 
